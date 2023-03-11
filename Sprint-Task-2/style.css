@@ -1,0 +1,327 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+}
+a{  
+    text-decoration: none;
+}
+.logo{
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 200px;
+}
+.logovk{
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.header{
+    display: flex;
+    padding-left: 12%;
+    padding-right: 12%;
+    background-color: rgb(41, 71, 181);
+}
+.body{
+    display: flex;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+.search{
+    padding-top: 5px;
+}
+.searchStyle{
+    height: 25px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    color: gray;
+    background-color: #334d67;
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.92%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200H16V16H0z%22%2F%3E%3Cpath%20d%3D%22M6.5%201a5.5%205.5%200%200%201%204.383%208.823l3.896%203.9a.75.75%200%200%201-1.061%201.06l-3.895-3.9A5.5%205.5%200%201%201%206.5%201zm0%201.5a4%204%200%201%200%200%208%204%204%200%200%200%200-8z%22%20fill%3D%22%23818c99%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+    background-position: 10px;
+    background-repeat: no-repeat;
+}
+.menubar{
+    display: block;
+    margin-top: 20px;
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(62, 62, 62);
+}
+.menubaritem{
+    padding-left: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menubaritem:hover{
+    color: white;
+    background-color: #334d67;
+    border-radius: 10px;
+}
+
+.mainbody{
+    display: flex;
+    margin-top: 20px;
+}
+.profileimg{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+}
+.mainimg{
+    width: 250px;
+    height: 250px;
+}
+
+.profilefriends{
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-left: 3px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.updbutton{
+    color: #334d67;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: rgb(238, 238, 238);
+}
+.ff{
+    display: flex;
+}
+.fimg{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.fitems{
+    padding: 15px;
+}
+
+.rightprofile{
+    width: 100%;
+}
+.informationprofile{
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 1px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.informationbody{
+    display: flex;
+}
+.infotype{
+    font-size: 0.8em;
+}
+.infotype > p{
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+}
+.information{
+    font-size: 0.8em;
+    color: #334d67;
+    padding-left: 20px;
+}
+.information > p{
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+}
+.infoitems{
+    display: flex;
+}
+.finfoitem{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.infoitem{
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+.infovalue{
+    color: #334d67;
+    text-align: center;
+}
+.infotext{
+    color: gray;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.allphoto{
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.aboutphoto{
+    padding-top: 15px;
+    padding-left: 10px;
+    display: flex;
+}
+.aboutphototext{
+    font-size: 0.8em;
+}
+.aboutphotovalue{
+    font-size: 0.9em;
+    padding-left: 10px;
+    color: #959696;
+}
+.photoitems{
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+.photoitems > img{
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.profilepost{
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.profileprofile{
+    display: flex;
+    padding-top: 15px;
+}
+.aboutprofile{
+    font-size: 0.8em;
+    color: #334d67;
+    padding-top: 3px;
+    padding-left: 10px;
+}
+.aboutprofile > p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.friendsmainbody{
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.friendsheader{    
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    font-size: 0.9em;
+    display: flex;
+}
+.allfriends{
+    padding: 10px;
+    display: flex;
+}
+.friendsitemvalues{
+    font-size: 0.9em;
+    color: #959696;
+    padding-left: 10px;
+}
+.findbutton{
+    padding-top: 10px;
+    padding-left: 240px;
+    padding-right: 10px;
+}
+.finbutton{
+    width: 115px;
+    height: 25px;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    background-color: #446a8f;
+}
+.friendsearches{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    margin-top: 1px;
+}
+.friendssearch{
+    border: 0;
+    outline: none;
+    color: gray;
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.92%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200H16V16H0z%22%2F%3E%3Cpath%20d%3D%22M6.5%201a5.5%205.5%200%200%201%204.383%208.823l3.896%203.9a.75.75%200%200%201-1.061%201.06l-3.895-3.9A5.5%205.5%200%201%201%206.5%201zm0%201.5a4%204%200%201%200%200%208%204%204%200%200%200%200-8z%22%20fill%3D%22%23818c99%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+    background-position: 10px;
+    background-repeat: no-repeat;
+}
+
+.friendsitem{
+    display: flex;
+    padding-top: 5px;
+    padding-left: 15px;
+    background-color: white;
+    margin-top: 1px;
+}
+.friendsimg{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+.friendsinfo{
+    padding-left: 10px;
+}
+.friendsinfo > p{
+    font-size: 0.9em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.rightfriendsmenu{
+    font-size: 0.8em;
+    width: 240px;
+}
+.rightfriendsmenuitems{
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.rightfriendsmenuitemactive{
+    padding: 10px;
+    background-color:#a8b9ca;
+}
+.rightfriendsmenuitem{
+    padding: 10px;
+}
+
+.rightfriendsitems{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.friendsitemimg{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.friendsmenuitem{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
