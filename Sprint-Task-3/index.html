@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint task 2</title>
+</head>
+    <body>
+        <div id="sumBars">
+            <div id="sumText">
+                Введите сумму:
+            </div>
+            <div id="inputBar">
+                <input id="sum" value="">
+                <select id="currency">
+                    <option disabled selected>Выберите валюту</option>
+                    <option value="KZT">KZT</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+        </div>
+        <div class="outpurBar">
+            <div class="currencyText">
+                KZT (tenge)
+            </div>
+            <div>
+                <input id="KZT" class="outputSum" disabled value=" -">
+            </div>
+        </div>
+        <div class="outpurBar">
+            <div class="currencyText">
+                USD (dollar)
+            </div>
+            <div>
+                <input id="USD" class="outputSum" disabled value=" -">
+            </div>
+        </div>
+        <div class="outpurBar"> 
+            <div class="currencyText">
+                EUR (euro)
+            </div>
+            <div>
+                <input id="EUR" class="outputSum" disabled value=" -">
+            </div>
+        </div>
+        <script>
+            let currencyBuyArray = [
+                    {name: 'KZT', curKZT: 1},
+                    {name: 'USD', curUSD: 429},
+                    {name: 'EUR', curEUR: 507}
+            ];
+            let currencySellArray = [
+                    {name: 'KZT', curKZT: 1},
+                    {name: 'USD', curUSD: 431},
+                    {name: 'EUR', curEUR: 509}
+            ];
+            function buy(){
+                        if(currency.value == "KZT"){
+                            KZT.value = "  -";
+                            USD.value = "  " + (parseInt(sum.value) / currencySellArray[1].curUSD).toFixed(2);
+                            EUR.value = "  " + (parseInt(sum.value) / currencySellArray[2].curEUR).toFixed(2);
+                        }
+                        if(currency.value == "USD"){
+                            KZT.value = "  " + (parseInt(sum.value) * currencyBuyArray[1].curUSD).toFixed(2);
+                            USD.value = "  -";
+                            EUR.value = "  " + (parseInt(sum.value) * currencyBuyArray[1].curUSD / currencySellArray[2].curEUR).toFixed(2);
+                        }
+                        if(currency.value == "EUR"){
+                            KZT.value = "  " + (parseInt(sum.value) * currencyBuyArray[2].curEUR).toFixed(2);
+                            USD.value = "  " + (parseInt(sum.value) * currencyBuyArray[2].curEUR / currencySellArray[1].curUSD).toFixed(2);
+                            EUR.value = "  -";
+                        }
+            }
+            currency.onchange = buy;
+            
+    </script>
+    </body>
+</html>
