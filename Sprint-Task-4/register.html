@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint task 4</title>
+</head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                TWITTER
+            </div>
+            <div id="menu">
+                <div class="menuItem">
+                    <a>Tweets</a>
+                </div>
+                <div class="menuItem">
+                    <a href="./login.html">Login</a>
+                </div>
+                <div class="menuItem">
+                    <a>Register</a>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <p>EMAIL:
+                <br>
+                <input type="text" class="input" id="email">
+            </p>
+            <p>PASSWORD:
+                <br>
+                <input type="password" class="input" id="password">
+            </p>
+            <p>FULL NAME:
+                <br>
+                <input type="text" class="input" id="fullname">
+            </p>
+            <p>COUNTRY:
+                <br>
+                <select class="input" id="country">
+                    <option disabled selected>Select a country</option>
+                    <option>Kazakhstan</option>
+                    <option>Russian</option>
+                    <option>USA</option>
+                    <option>China</option>
+                </select>
+            </p>
+            <p>BIRTHDATE:
+                <br>
+                <input type="date" class="input" id="birthday">
+            </p>
+            <button class="button" onclick="addUser()">REGISTER</button>
+        </div>
+        <script>
+            let usersArray = [];
+
+            function addUser(){
+                let newUser = {};
+                newUser.email = email.value;
+                newUser.password = password.value;
+                newUser.fullname = fullname.value;
+                newUser.country = country.value;
+                newUser.birthday = birthday.value;
+
+                usersArray.push(newUser);
+
+                updateStorage();
+            }
+
+            function updateStorage(){
+                localStorage.users = JSON.stringify(usersArray);
+            }
+        </script>
+    </body>
+</html>

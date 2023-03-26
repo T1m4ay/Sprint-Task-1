@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint task 4</title>
+</head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                TWITTER
+            </div>
+            <div id="menu">
+                <div class="menuItem">
+                    <a>Tweets</a>
+                </div>
+                <div class="menuItem">
+                    <a id="loginName"></a>
+                </div>
+                <div class="menuItem">
+                    <a href="./register.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="welcomeLog">
+            <b id="loginFullName"></b>
+            </div>
+            <p>EMAIL:
+                <br>
+            </p>
+            <b id="logEmain">
+
+            </b>
+            <p>PASSWORD:
+                <br>
+            </p>
+            <b id="logPassword">
+                
+            </b>
+            <p>FULL NAME:
+                <br>
+            </p>
+            <b id="logFName">
+                
+            </b>
+            <p>COUNTRY:
+                <br>
+            </p>
+            <b id="logCountry">
+                
+            </b>
+            <p>BIRTHDATE:
+                <br>
+            </p>
+            <b id="logBirt">
+                
+            </b>
+        </div>
+        <script>
+            let usersArray = [];
+            if(localStorage.users != null){
+                    usersArray = JSON.parse(localStorage.users);
+                }
+
+            const uIndex = +localStorage.getItem('userIndex')
+            loginName.innerHTML = usersArray[uIndex].fullname;
+            logEmain.innerHTML = usersArray[uIndex].email;
+            logPassword.innerHTML = usersArray[uIndex].password;
+            logFName.innerHTML = usersArray[uIndex].fullname;
+            logCountry.innerHTML = usersArray[uIndex].country;
+            logBirt.innerHTML = usersArray[uIndex].birthday;
+            loginFullName.innerHTML = "Welcome" + usersArray[uIndex].fullname;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint task 4</title>
+</head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                TWITTER
+            </div>
+            <div id="menu">
+                <div class="menuItem">
+                    <a>Tweets</a>
+                </div>
+                <div class="menuItem">
+                    <a>Login</a>
+                </div>
+                <div class="menuItem">
+                    <a href="./register.html">Register</a>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <p>EMAIL:
+                <br>
+                <input type="text" class="input" id="checkEmail">
+            </p>
+            <p>PASSWORD:
+                <br>
+                <input type="password" class="input" id="checkPassword">
+            </p>
+            <button class="button" onclick="checkUser()">SIGN IN</button>
+        </div>
+        <script>
+            let usersArray = [];
+            let uIndex;
+            function checkUser(){
+                if(localStorage.users != null){
+                    usersArray = JSON.parse(localStorage.users);
+                }
+                for(let i = 0; i < usersArray.length; i++){
+                    if(usersArray[i].email == checkEmail.value && usersArray[i].password == checkPassword.value){
+                        uIndex = i;
+                        alert('Welcome: ' + usersArray[i].fullname);
+                        updateUserIndex();
+                        window.location.href = './logined.html';
+                    }else{
+                        alert('Not correct user name or password');
+                    }
+                }
+            }
+            function updateUserIndex(){
+                localStorage.setItem('userIndex', uIndex);
+            }
+        </script>
+    </body>
+</html>
