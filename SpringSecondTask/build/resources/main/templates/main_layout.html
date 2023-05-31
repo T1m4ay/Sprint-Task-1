@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head th:insert="header.html">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div th:insert="navbar.html">
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row bg-info p-4">
+                <div class="col-12">
+                    <h4 class="text-center">
+                        Welcome to our site
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="min-height: 800px;">
+            <div layout:fragment="siteContent">
+            </div>
+        </div>
+    </body>
+</html>

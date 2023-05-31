@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="main_layout.html">
+<div layout:fragment="siteContent">
+  <div class="row">
+    <div class="col-8 mx-auto">
+        <div class="row">
+          <div class="col-12">
+            <label>ФИО : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="text" class="form-control" th:field="${applicationRequest.userName}" name="userName" placeholder="userName" required disabled>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label>Курс : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+              <input type="text" class="form-control" th:field="${applicationRequest.courseName}" name="courseName" placeholder="courseName" required disabled>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label>Телефон : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="text" class="form-control" th:field="${applicationRequest.phone}" name="phone" placeholder="phone" required disabled>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <label>Комментарии : </label>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12">
+            <input type="text" class="form-control" th:field="${applicationRequest.commentary}" name="phone" placeholder="phone" required disabled>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div th:if="${applicationRequest.handled == false}" class="col-4">
+              <a class="btn btn-primary" role="button" th:href="@{procces-application/{id}(id=${applicationRequest.id})}">ОБРАБОТАТЬ ЗАЯВКУ</a>
+          </div>
+            <div class="col-4">
+                <a class="btn btn-primary" role="button" th:href="@{delete-application/{id}(id=${applicationRequest.id})}">УДАЛИТЬ ЗАЯВКУ</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</html>

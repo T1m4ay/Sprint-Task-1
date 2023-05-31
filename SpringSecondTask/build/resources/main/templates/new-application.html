@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="main_layout.html">
+
+<div layout:fragment="siteContent">
+  <div th:each = "app : ${applicationRequestList}" class="row">
+    <div th:if="${app.handled == false}" class="col-5 border p-1">
+      <div>
+        <p class="fs-5"><span class="text-danger">*(Новая)</span> Заявка от <span th:text="${app.userName}"></span></p>
+        <div class="pt-2 fs-6">
+          <p>Курс: <span th:text="${app.courseName}"></span></p>
+          <p th:text="${app.commentary}"></p>
+        </div>
+        <div>
+          <p class="fs-6">Тел: <span th:text="${app.phone}"></span> <a th:href="@{details/{id}(id=${app.id})}">Подробнее</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
